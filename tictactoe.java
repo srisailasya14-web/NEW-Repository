@@ -10,7 +10,6 @@ public class tictactoe {
         do {
             char[][] board = new char[6][7];
 
-            // Fill board
             for (int i = 0; i < 6; i++) {
                 for (int j = 0; j < 7; j++) {
                     board[i][j] = '.';
@@ -22,7 +21,7 @@ public class tictactoe {
 
             while (!gameOver) {
 
-                // Display board
+                
                 System.out.println();
                 for (int i = 0; i < 6; i++) {
                     for (int j = 0; j < 7; j++) {
@@ -41,7 +40,7 @@ public class tictactoe {
 
                 boolean placed = false;
 
-                // Drop piece
+                
                 for (int row = 5; row >= 0; row--) {
                     if (board[row][col] == '.') {
                         board[row][col] = player;
@@ -55,7 +54,7 @@ public class tictactoe {
                     continue;
                 }
 
-                // Check Horizontal
+                
                 boolean win = false;
 
                 for (int i = 0; i < 6; i++) {
@@ -68,7 +67,7 @@ public class tictactoe {
                     }
                 }
 
-                // Check Vertical
+                
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 7; j++) {
                         if (board[i][j] == player &&
@@ -79,7 +78,7 @@ public class tictactoe {
                     }
                 }
 
-                // Check Diagonal (\)
+                
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 4; j++) {
                         if (board[i][j] == player &&
@@ -90,7 +89,7 @@ public class tictactoe {
                     }
                 }
 
-                // Check Diagonal (/)
+                
                 for (int i = 3; i < 6; i++) {
                     for (int j = 0; j < 4; j++) {
                         if (board[i][j] == player &&
@@ -117,7 +116,7 @@ public class tictactoe {
                     continue;
                 }
 
-                // Draw Check
+                
                 boolean draw = true;
 
                 for (int j = 0; j < 7; j++) {
@@ -133,7 +132,7 @@ public class tictactoe {
                     continue;
                 }
 
-                // Change Player
+                
                 if (player == 'X')
                     player = 'O';
                 else
